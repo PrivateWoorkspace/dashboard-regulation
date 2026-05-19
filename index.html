@@ -177,7 +177,7 @@
                 // - 불릿(목록) 처리 (6~7pt 사이즈 적용)
                 else if (line.startsWith('-')) {
                     if (!inList) {
-                        html += '<ul class="space-y-1 mb-3">';
+                        html += '<ul class="space-y-1 mb-1.5">'; // mb-3에서 mb-1.5로 줄여서 문단 간격 축소
                         inList = true;
                     }
                     const item = line.substring(1).trim();
@@ -193,7 +193,7 @@
                         html += '</ul>';
                         inList = false;
                     }
-                    html += `<p class="text-[9.5px] text-gray-600 mb-3 leading-relaxed pl-1">${line}</p>`;
+                    html += `<p class="text-[9.5px] text-gray-600 mb-1.5 leading-relaxed pl-1">${line}</p>`; // mb-3에서 mb-1.5로 줄여서 목록과의 간격 일치시킴
                 }
             });
 
